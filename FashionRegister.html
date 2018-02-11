@@ -7,6 +7,94 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
         <title>Registration - Verve2k18</title>
+        
+        
+        
+        
+        
+         <script>
+        
+        function en()
+        {
+           document.getElementById("partner_name").disabled=false; 
+           document.getElementById("team_leader_name").disabled=false;
+           document.getElementById("team_name").disabled=false;
+           document.getElementById("team_size").disabled=false;
+            
+            
+            
+            document.getElementById("partner_name_label").style.display="block";
+            document.getElementById("team_leader_name_label").style.display="block";
+            document.getElementById("team_name_label").style.display="block";
+            document.getElementById("team_size_label").style.display="block";
+            
+        }
+        
+        
+        function populate(str)
+        {
+                    
+            
+                   switch(str)
+                        {
+                            case "Solo":
+                                
+                                document.getElementById("partner_name").value="";
+                                document.getElementById("partner_name").disabled=true; 
+                                document.getElementById("partner_name_label").style.display="none";
+                                
+                                document.getElementById("team_leader_name").value="";
+                                document.getElementById("team_leader_name").disabled=true;
+                                document.getElementById("team_leader_name_label").style.display="none";
+                                
+                                
+                                
+                                document.getElementById("team_name").value="";
+                                document.getElementById("team_name").disabled=true;
+                                document.getElementById("team_name_label").style.display="none";
+                              
+                                document.getElementById("team_size").value="";
+                                document.getElementById("team_size").disabled=true;
+                                document.getElementById("team_size_label").style.display="none";
+                                
+                                break;
+                                
+                                
+                            case "Duet":  
+                                en();
+                                
+                                document.getElementById("team_leader_name").value="";
+                                document.getElementById("team_leader_name").disabled=true;
+                                document.getElementById("team_leader_name_label").style.display="none";
+                                
+                                document.getElementById("team_name").value="";
+                                document.getElementById("team_name").disabled=true;
+                                document.getElementById("team_name_label").style.display="none";
+                                
+                                document.getElementById("team_size").value="";
+                                document.getElementById("team_size").disabled=true;
+                                document.getElementById("team_size_label").style.display="none";
+                                break;
+                                
+                            case "Group": 
+                                en();
+                                
+                                
+                                
+                                break;
+                        }
+                    
+        }
+        
+    </script> 
+        
+        
+        
+        
+        
+        
+        
+        
 
 <!-- This site is optimized with the Yoast SEO plugin v6.0 - https://yoast.com/wordpress/plugins/seo/ -->
 <link rel="canonical" href="http://www.unmaad.com/footloose-form/" />
@@ -27,6 +115,15 @@
 <link rel="alternate" type="application/rss+xml" title="Unmaad 2018 &raquo; Feed" href="http://www.unmaad.com/feed/" />
 <link rel="alternate" type="application/rss+xml" title="Unmaad 2018 &raquo; Comments Feed" href="http://www.unmaad.com/comments/feed/" />
 <!-- This site uses the Google Analytics by MonsterInsights plugin v6.2.6 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+
+
+
+
+
+
+
+
+
 <script type="text/javascript" data-cfasync="false">
 		var disableStr = 'ga-disable-UA-112031302-1';
 
@@ -221,12 +318,22 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
 				}catch(d){console.log("Failure at Presize of Slider:"+d)}
 			};</script>
 <meta property="og:title" content="Footloose Form" />
-<meta property="og:description" content="" /><link rel="icon" type="image/x-icon" href="http://139.59.69.58/wp-content/uploads/2017/12/favicon-1.png"><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>    </head>
+<meta property="og:description" content="" /><link rel="icon" type="image/x-icon" href="http://139.59.69.58/wp-content/uploads/2017/12/favicon-1.png"><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>  
+    
+      
+        
+         
+            
+              
+                  </head>
 
     <body class="page-template-default page page-id-708 sticky-slide-header font-dark skin-light background-page wrap-wide header-on  pagetitle-off sidebar-off sidebar-none vc-on slider-off topbar-off wpb-js-composer js-comp-ver-5.2 vc_responsive"  data-id="708" >
         
     
+   
+    
 
+   
     
 <div class="ideo-transition ideo-transition-overlay" style="background-color: #ffffff;"></div>
 
@@ -347,26 +454,134 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
 <input type="hidden" name="_wpcf7_container_post" value="708" />
 </div>
 
-<p><label>First Name<br />
-<span class="wpcf7-form-control-wrap POCName"><input type="text" name="Name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span></label></p>
-
-<p><label>Last Name<br />
-<span class="wpcf7-form-control-wrap POCName"><input type="text" name="LastName" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span></label></p>
-
-<p><label>Enrollment number<br />
-<span class="wpcf7-form-control-wrap Numberofmember"><input type="number" name="Enrollment" value="" class="wpcf7-form-control wpcf7-number wpcf7-validates-as-required wpcf7-validates-as-number" min="1" aria-required="true" aria-invalid="false" /></span></label></p>
-
-<p><label>Contact Number<br />
-<span class="wpcf7-form-control-wrap POCContact"><input type="tel" name="Contact" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" /></span></label></p>
-
-<p><label>Email ID<br />
-<span class="wpcf7-form-control-wrap POCEmail"><input type="email" name="Email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span></label></p>
 
 
+<!--details-->
 
-<p><label>
-<div class="button-wrap  align-center mobile-align-center  "><button id="button_5a3fbc2a5eef7" class="button button3d radius-small size-medium align-center reveal right-icon block colored-dark wpcf7-form-control wpcf7-submit " data-id="button-5a3fbc2a5eef7"  type="submit"><span>Submit</span><i class="fa fa-angle-right"></i></button></div>
-<p></label></p>
+
+<input type="hidden" value="Fashion Show" name="event" />
+
+<!--Choose the dance style-->
+<!--<p>
+<label>Choose your Dance Style</label>
+
+<br>
+<span class="wpcf7-form-control-wrap radio-134">
+<span class="wpcf7-form-control wpcf7-radio">
+
+
+<span class="wpcf7-list-item first">
+<label>
+<input name="radio-134" value="Classical" checked="checked" type="radio" />
+<span class="wpcf7-list-item-label">Classical</span>
+</label>
+</span>
+
+
+
+<span class="wpcf7-list-item">
+<label><input name="radio-134" value="Semi-Classical" type="radio" />
+<span class="wpcf7-list-item-label">Semi-Classical</span>
+</label>
+</span>
+
+
+<span class="wpcf7-list-item">
+<label><input name="radio-134" value="Folk" type="radio" />
+<span class="wpcf7-list-item-label">Folk</span>
+</label>
+</span>
+
+
+<span class="wpcf7-list-item last">
+<label>
+<input name="radio-134" value="Western" type="radio" />
+<span class="wpcf7-list-item-label">Western</span>
+</label></span></span></span>
+
+</p>
+
+<br>-->
+
+<!--solo/duet/group-->
+
+<!--<label>Category<br />
+<select name="category" onchange="populate(this.options[this.selectedIndex].value)">
+<option value="" selected>select</option>
+<option value="Solo">Solo</option>
+<option value="Duet">Duet</option>
+<option value="Group">Group</option>
+    </select>
+
+<br>
+<br>-->
+
+
+ Name <input type="text" name="name" required /><br><br>
+       
+       
+        Enrollment no <input type="number" name="enroll" required />
+        
+        <br>
+        <br>
+        Branch
+        <select>
+            <option selected="selected">--select--</option>
+            <option value="IT">IT</option>
+            <option value="CO">CO</option>
+            <option value="IC">IC</option>
+            <option value="EC">EC</option>
+        </select>
+        
+        <br>
+        <br>
+        
+        Year
+        <select>
+            <option selected="selected">--select--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        
+        <br>
+        <br>
+        
+        
+        <label id="ContactLabel">Contact no <br>
+            <input id="contact" type="text" name="contact" required  /><br></label>
+            
+            <br>
+            <br>
+            
+        <!--<label id="partner_name_label">Partner's name <br>
+            <input id="partner_name" type="text" name="partner_name" required /><br></label>
+            
+            <br>
+            <br>
+        
+        <label id="team_leader_name_label">Team leader name <br>
+            <input id="team_leader_name" type="text" name="team_leader_name"  /><br></label>
+            
+            <br>
+            <br>
+        
+        <label id="team_name_label">Team name <br>
+            <input id="team_name" type="text" name="team_name" required /><br></label>
+            
+            <br>
+            <br>
+            
+        <label id="team_size_label">No of members <br>
+            <input id="team_size" type="number" name="team_size" required  /><br></label>
+        <br>
+        <br>-->
+        <input type="submit">
+
+
+
+
 <div class="wpcf7-response-output wpcf7-display-none"></div></form></div></div>
 		</div> 
 	</div> 
@@ -374,6 +589,7 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
                
                                 
                                             </div>
+                                            
                                 </div>
         
 
