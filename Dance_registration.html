@@ -14,19 +14,9 @@
         
          <script>
              
-            /* var enrol="";
-             var institute="042";
-              var year="";
-             var disc="";
-             var branch="";
-             var roll="";
+            
              
-             
-        function getenrol()
-             {
-                 enrol=year+institute+disc+branch+roll;
-                 document.getElementById("enroll").value=enrol;
-             }*/
+        
              
         
         function en()
@@ -115,6 +105,11 @@
                         }
                     
         }
+        
+        
+             
+             
+        
         
     </script> 
         
@@ -479,24 +474,29 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
 <div id="content" class="it-blog skin-light background-content wrap-wide">
 
             <div class="row">
-            <div class="entry-content col-md-12 ">
-                <div id="5a3fbca98a4e4" data-id="5a3fbca98a4e4"  data-motion="scroll" data-motion-speed="0.3" data-background-width="1920" data-background-height="1200" class="vc_page_section vc_page_section_image   skin-dark  "><div class="overlay"></div>    <div class="container"><div class="row">
-	<div  id="5a7a12d5c52ed" class="vc_col-sm-12 wpb_column vc_column_container " data-id="5a7a12d5c52ed" data-source="5a7a12d5c52ed" >
-		<div class="wpb_wrapper">
-			<div class="ideo-contact-form7  transparent-dark  vc-layer" id="contact_form_7_5a3fbc2a5eef7" data-id="contact_form_7_5a3fbc2a5eef7" ><div role="form" class="wpcf7" id="wpcf7-f520-p708-o1" lang="en-US" dir="ltr">
-<div class="screen-reader-response"></div>
-<form style="color: white;font-size: 1.2em;">
-<div style="display: none;">
-<input type="hidden" name="_wpcf7" value="520" />
-<input type="hidden" name="_wpcf7_version" value="4.9.2" />
-<input type="hidden" name="_wpcf7_locale" value="en_US" />
-<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f520-p708-o1" />
-<input type="hidden" name="_wpcf7_container_post" value="708" />
-</div>
+             <div class="entry-content col-md-12 ">
+              <div id="5a3fbca98a4e4" data-id="5a3fbca98a4e4"  data-motion="scroll" data-motion-speed="0.3" data-background-width="1920" data-background-height="1200" class="vc_page_section vc_page_section_image   skin-dark  ">
+                    <div class="overlay"></div>   
+                    <div class="container">
+                        <div class="row">
+	                       <div  id="5a7a12d5c52ed" class="vc_col-sm-12 wpb_column vc_column_container " data-id="5a7a12d5c52ed" data-source="5a7a12d5c52ed" >
+		                        <div class="wpb_wrapper">
+			                        <div class="ideo-contact-form7  transparent-dark  vc-layer" id="contact_form_7_5a3fbc2a5eef7" data-id="contact_form_7_5a3fbc2a5eef7" >
+			                            <div role="form" class="wpcf7" id="wpcf7-f520-p708-o1" lang="en-US" dir="ltr">
+                                            <div class="screen-reader-response"></div>
+                                                <form style="color: white;font-size: 1.2em;">
+                                                    <div style="display: none;">
+                                                        <input type="hidden" name="_wpcf7" value="520" />
+                                                        <input type="hidden" name="_wpcf7_version" value="4.9.2" />
+                                                        <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f520-p708-o1" />
+                                                        <input type="hidden" name="_wpcf7_container_post" value="708" />
+                                                    </div>
 
 
 
 <!--details-->
+<!----------------------------------------------------------------->
 
 
 <input type="hidden" value="Dance" name="event" />
@@ -513,7 +513,7 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
 <span class="wpcf7-list-item first">
 <label>
 <input name="radio-134" value="Classical" checked="checked" type="radio" />
-<span class="wpcf7-list-item-label">Classical</span>
+<span class="wpcf7-list-item-label">Theme</span>
 </label>
 </span>
 
@@ -521,37 +521,26 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
 
 <span class="wpcf7-list-item">
 <label><input name="radio-134" value="Semi-Classical" type="radio" />
-<span class="wpcf7-list-item-label">Semi-Classical</span>
+<span class="wpcf7-list-item-label">Non Theme</span>
 </label>
 </span>
 
 
-<span class="wpcf7-list-item">
-<label><input name="radio-134" value="Folk" type="radio" />
-<span class="wpcf7-list-item-label">Folk</span>
-</label>
-</span>
-
-
-<span class="wpcf7-list-item last">
-<label>
-<input name="radio-134" value="Western" type="radio" />
-<span class="wpcf7-list-item-label">Western</span>
-</label></span></span></span>
+</span></span>
 
 </p>
 
 <br>
-
 <!--solo/duet/group-->
-
 <label>Category<br />
-<select name="category" onchange="populate(this.options[this.selectedIndex].value)">
-<option value="" selected>select</option>
+<select name="category" id="category">
+<!--<option value="" selected>select</option>-->
 <option value="Solo">Solo</option>
 <option value="Duet">Duet</option>
 <option value="Group">Group</option>
     </select>
+    
+    <!-- onchange="populate(this.options[this.selectedIndex].value)"-->
 
 <br>
 <br>
@@ -560,7 +549,7 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
  Name (Learder's name, if group) <input type="text" name="name" required class="inputt" /><br><br>
        
        
-        Enrollment no <input type="number" name="enroll" id="enroll" required  />
+        Enrollment no <input type="text" name="enroll" id="enroll" required  />
         <p id="help"></p>
         
         <br>
@@ -597,35 +586,35 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
         
         
         <label id="ContactLabel">Contact no <br>
-            <input id="contact" type="text" name="contact" required  /><br></label>
+            <input id="contact" type="text" name="contact" pattern="[789][0-9]{9}"  required /><br></label>
             
-            <br>
-            <br>
-            
-        <label id="partner_name_label">Partner's name <br>
-            <input id="partner_name" type="text" name="partner_name" required  /><br></label>
             
             <br>
             <br>
         
-        <label id="team_name_label">Team name <br>
-            <input id="team_name" type="text" name="team_name" required /><br></label>
+        
+        <div id="categ">
+        </div>
+        
+        
+            
             
             <br>
             <br>
+        
+        
             
-        <label id="team_size_label">No of members <br>
-            <input id="team_size" type="number" name="team_size" required  /><br></label>
-        <br>
-        <br>
+        <div id="items">
+            
+        </div>                                            
+            
+        
         <input type="submit" id="submit"/>
-
-
-
-
-<div class="wpcf7-response-output wpcf7-display-none"></div>
+    </label>
     
-    </form></div></div>
+    </form>
+    
+    </div>
 		</div> 
 	</div> 
 </div></div></div>
@@ -640,7 +629,7 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
         
 </div> <!-- /#content -->
 
-            
+                      
     
 
             
@@ -654,7 +643,7 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
     <div id="ajax-container"></div><!-- #ajax-container -->
 
     <div id="ideo-page-preloader" class="out"></div>
-
+        </div>
         
     <a href="#top" class="js--back-top-button back-top-button"><i class="id id-up"></i></a><link rel='stylesheet' id='font-awesome-css'  href='http://139.59.69.58/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=5.2' type='text/css' media='all' />
 <script type='text/javascript'>
@@ -773,7 +762,146 @@ $(function()
  //    };
 
 })
+    
+    
+    //----------------------------------------------------------------
+    
+    
+    
+    
+    
         </script>
+        
+
+
+    
+<script>
+    $(function(){
+        
+        $("#category").change(function(){
+            var cat=$("#category option:selected").val();
+            
+            
+             if(cat=="Solo")
+            {
+                
+                $("#categ").empty();
+                $("#items").empty();
+                
+            }
+        else if(cat=="Duet")
+            {
+                
+                $("#categ").empty();
+                $("#items").empty();
+                $("#categ").append('<label id="partner_name_label">Partner\'s name <br><input id="partner_name" type="text" name="partner_name" required  /><br></label>');
+            }
+        else if(cat=="Group"){
+            $("#categ").empty();
+            $("#items").empty();
+            $("#categ").append('<label id="team_name_label">Team name <br><input id="team_name" type="text" name="team_name" required /><br></label><br><br><label id="team_size_label">No of members <br><input id="team_size" type="number" name="team_size" required  /><br></label></label>');
+        }
+        else{
+            $("#categ").empty();
+        }
+            
+            
+        })
+       
+    });
+</script>
+    
+    
+            
+        
+<script>
+            $(function() {
+ //maximum input boxes allowed
+var wrapper = $("#items"); //Fields wrapper
+//var add_button = $(".add_field_button"); //Add button ID
+
+ //initlal text box count
+$("#categ").on("change","#team_size",function(e){ //on add input button click
+var x = 2;
+wrapper.empty();
+var max_fields = parseInt(document.getElementById("team_size").value);
+e.preventDefault();
+$(wrapper).append('Enter names for rest '+(max_fields-1)+' members<br>');
+while(x <= max_fields){ //max input box allowed
+ //text box increment
+$(wrapper).append('member '+x+'<br>Enrollment no <input type="number" name="enrolll" id="enrolll" required /><p id="helpp"></p> <input type="text" name="name" required class="inputt" /><br><br>'); //add input box
+    x++;
+}
+});
+ 
+})
+        </script>
+        
+        
+        
+<script>
+    
+$(function()
+
+{
+	$("#submit").prop("disabled", true);
+	$("#items").on("keyup","#enrolll",function(e){
+       var str=$("#enrolll").val();
+       if((str.indexOf("14042")==0 && str.length==12)||(str.indexOf("15042")==0 && str.length==12)||(str.indexOf("16042")==0 && str.length==12)||(str.indexOf("17042")==0 && str.length==12))
+        {
+            if((str.substr(5,2)=="01" && str.length==12)||(str.substr(5,2)=="31" && str.length==12 && str.substr(0,5)!="14042")){
+            if((str.substr(7,2)=="29" && str.length==12) || (str.substr(7,2)=="16" && str.length==12) || (str.substr(7,2)=="05" && str.length==12) || (str.substr(7,2)=="11" && str.length==12)  || (str.substr(7,2)=="17" && str.length==12)  ||  (str.substr(7,2)=="09" && str.length==12) || (str.substr(7,2)=="07" && str.length==12) || (str.substr(7,2)=="06" && str.length==12))
+            {
+                 $("#helpp").html("Okay");
+        // var x=1;
+          $("#submit").removeAttr("disabled");   
+            }
+        }
+        }
+        else if((str.indexOf("155310693")==0 && str.length==12)||(str.indexOf("165310693")==0 && str.length==12)||(str.indexOf("175310693")==0 && str.length==12))
+            {
+                $("#helpp").html("Okay");
+        // var x=1;
+          $("#submit").removeAttr("disabled");
+            }
+        
+        
+        
+       else {
+       	$("#helpp").html("Invalid Enrollment no.");
+       	
+       }
+
+
+        if(str=='') 
+        {     	
+        	$("#helpp").html("");
+        	$("#submit").prop("disabled", true);}
+        e.preventDefault();
+
+
+        });
+	// function submit(){
+ //            if(x==1){
+ //                return true;
+ //           }
+ //           else{
+ //               alert("Please check value of VAR");
+ //               return false;
+ //           }
+ //    };
+
+})
+    
+    
+    //----------------------------------------------------------------
+    
+    
+    
+    
+    
+        </script>        
+        
   </body>
 
 </html>
