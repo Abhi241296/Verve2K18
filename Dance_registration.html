@@ -467,7 +467,7 @@ Name (Learder's name, if group)
 </label><br><br>
        
        
-<label>Enrollment no <input type="text" name="enroll" id="enroll" required  />
+<label>Enrollment no <input type="text" name="enroll" id="enroll" class="enrolll" required  />
 <p id="help"></p></label>
         
         <br>
@@ -824,7 +824,40 @@ $(function()
     
     
     
-        </script>        
+</script>  
+        
+    
+            
+                    
+                                    
+<script>
+    $("#items").on("change",".enrolll",function(){
+        if($(this).val()==$(".enrolll").not(this).val() && $(this).val()!="")
+            $(this).next().html("Entry already exists");
+    })
+</script>      
+        
+<script>
+    $(".enrolll").change(function(){
+        var x=this;
+        $(".enrolll").each(function(){
+            if($(x).val()==$(this).not(x).val() && $(x).val()!="")
+            $(x).next().html("Entry already exists");
+        });
+    })
+</script>      
+       
+<script>
+    $("#items").on("change",".enrolll",function(){
+        var x=this;
+        $(".enrolll").each(function(){
+            if($(x).val()==$(this).not(x).val() && $(this).val()!="")
+                $(x).next().html("Entry already exists");
+        });
+    })
+</script>
+        
+        
         
 
 
