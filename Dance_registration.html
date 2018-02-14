@@ -10,109 +10,6 @@
         
         
         
-        
-        
-         <script>
-             
-            
-             
-        
-             
-        
-        function en()
-        {
-           document.getElementById("partner_name").disabled=false; 
-           
-           document.getElementById("team_name").disabled=false;
-           document.getElementById("team_size").disabled=false;
-            
-            
-            
-            document.getElementById("partner_name_label").style.display="block";
-           
-            document.getElementById("team_name_label").style.display="block";
-            document.getElementById("team_size_label").style.display="block";
-            
-        }
-        
-        
-        function populate(str)
-        {
-                    
-            
-                   switch(str)
-                        {
-                            case "Solo":
-                                
-                                document.getElementById("partner_name").value="";
-                                document.getElementById("partner_name").disabled=true; 
-                                document.getElementById("partner_name_label").style.display="none";
-                                
-                                
-                                
-                                
-                                
-                                document.getElementById("team_name").value="";
-                                document.getElementById("team_name").disabled=true;
-                                document.getElementById("team_name_label").style.display="none";
-                              
-                                document.getElementById("team_size").value="";
-                                document.getElementById("team_size").disabled=true;
-                                document.getElementById("team_size_label").style.display="none";
-                                
-                                break;
-                                
-                                
-                            case "Duet":  
-                                en();
-                                
-                                
-                                
-                                document.getElementById("team_name").value="";
-                                document.getElementById("team_name").disabled=true;
-                                document.getElementById("team_name_label").style.display="none";
-                                
-                                document.getElementById("team_size").value="";
-                                document.getElementById("team_size").disabled=true;
-                                document.getElementById("team_size_label").style.display="none";
-                                break;
-                                
-                            case "Group": 
-                                en();
-                                
-                                document.getElementById("partner_name").value="";
-                                document.getElementById("partner_name").disabled=true; 
-                                document.getElementById("partner_name_label").style.display="none";
-                                break;
-                                
-                            case "select":
-                                
-            
-                                document.getElementById("partner_name").value="";
-                                document.getElementById("partner_name").disabled=true; 
-                                document.getElementById("partner_name_label").style.display="none";
-                                
-                               
-                                
-                                
-                                document.getElementById("team_name").value="";
-                                document.getElementById("team_name").disabled=true;
-                                document.getElementById("team_name_label").style.display="none";
-                              
-                                document.getElementById("team_size").value="";
-                                document.getElementById("team_size").disabled=true;
-                                document.getElementById("team_size_label").style.display="none";
-                        }
-                    
-        }
-        
-        
-             
-             
-        
-        
-    </script> 
-        
     <script src="javascript/slim.min.js" ></script>
         
         
@@ -284,15 +181,30 @@ img.emoji {
                     background-image: linear-gradient(transparent 0%, transparent 70%, #3a3a3a 30%, #3a3a3a 100%);
                 }
     
-                .inputt
+                .input
                 {
-                    width: 40%;
+                    width: 100%;
+                }
+    
+                .frame
+                {
+                    border-color: white;
+                    border-style:ridge;
+                    padding: 20px;
+                    
+                    
                 }
     
     
   
         
 </style>
+
+
+
+
+
+
 <link href="css/amatic.css?family=Amatic+SC" rel="stylesheet">
 <link rel='stylesheet' id='js_composer_front-css'  href='css/js_composer.min.css' type='text/css' media='all' />
 <link rel='stylesheet' id='ideothemo-style-cache-css'  href='css/style.css' type='text/css' media='all' />
@@ -451,6 +363,8 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
 
 
 </ul>
+                   
+                      
                     <form class="mobile-navbar-form" role="search" method="get" action="http://www.unmaad.com/">
                         <div class="form-group">
                             <input type="text" class="form-control" name="s" placeholder="START TYPING...">
@@ -484,7 +398,8 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
 			                        <div class="ideo-contact-form7  transparent-dark  vc-layer" id="contact_form_7_5a3fbc2a5eef7" data-id="contact_form_7_5a3fbc2a5eef7" >
 			                            <div role="form" class="wpcf7" id="wpcf7-f520-p708-o1" lang="en-US" dir="ltr">
                                             <div class="screen-reader-response"></div>
-                                                <form style="color: white;font-size: 1.2em;">
+                                                <div class="decor">
+                                                <form style="color: white;font-size: 1.2em;" method="post">
                                                     <div style="display: none;">
                                                         <input type="hidden" name="_wpcf7" value="520" />
                                                         <input type="hidden" name="_wpcf7_version" value="4.9.2" />
@@ -539,21 +454,25 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
 <option value="Duet">Duet</option>
 <option value="Group">Group</option>
     </select>
+    </label>
     
     <!-- onchange="populate(this.options[this.selectedIndex].value)"-->
 
 <br>
 <br>
 
-
- Name (Learder's name, if group) <input type="text" name="name" required class="inputt" /><br><br>
+<label>
+Name (Learder's name, if group) 
+<input type="text" name="name" required class="inputt" />
+</label><br><br>
        
        
-        Enrollment no <input type="text" name="enroll" id="enroll" required  />
-        <p id="help"></p>
+<label>Enrollment no <input type="text" name="enroll" id="enroll" required  />
+<p id="help"></p></label>
         
         <br>
         
+        <label>
         Branch
         <select>
             <option selected="selected">--select--</option>
@@ -567,11 +486,12 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
             <option value="IT">Information Technology</option>
             <option value="IC">Instrumentation and Control</option>
             <option value="Textile">Textile</option>
-        </select>
+            </select></label>
         
         <br>
         <br>
         
+        <label>
         Year
         <select>
             <option selected="selected">--select--</option>
@@ -579,7 +499,7 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-        </select>
+            </select></label>
         
         <br>
         <br>
@@ -592,9 +512,9 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
             <br>
             <br>
         
-        
+        <label>
         <div id="categ">
-        </div>
+        </div></label>
         
         
             
@@ -610,9 +530,10 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
             
         
         <input type="submit" id="submit"/>
-    </label>
+    
     
     </form>
+    </div>
     
     </div>
 		</div> 
@@ -821,15 +742,16 @@ var wrapper = $("#items"); //Fields wrapper
 //var add_button = $(".add_field_button"); //Add button ID
 
  //initlal text box count
-$("#categ").on("change","#team_size",function(e){ //on add input button click
+$("#categ").on("keyup","#team_size",function(e){ //on add input button click
 var x = 2;
 wrapper.empty();
 var max_fields = parseInt(document.getElementById("team_size").value);
 e.preventDefault();
+    if(max_fields>1)
 $(wrapper).append('Enter names for rest '+(max_fields-1)+' members<br>');
 while(x <= max_fields){ //max input box allowed
  //text box increment
-$(wrapper).append('member '+x+'<br>Enrollment no <input type="number" name="enrolll" id="enrolll" required /><p id="helpp"></p> <input type="text" name="name" required class="inputt" /><br><br>'); //add input box
+$(wrapper).append('member '+x+'<br><label>Enrollment no <input type="text" class="enrolll" required /><p class="helpp"></p>Name <input type="text" name="name" required class="inputt" /></label><br><br><br><br>'); //add input box
     x++;
 }
 });
@@ -845,14 +767,15 @@ $(function()
 
 {
 	$("#submit").prop("disabled", true);
-	$("#items").on("keyup","#enrolll",function(e){
-       var str=$("#enrolll").val();
+	$("#items").on("keyup",".enrolll",function(e){
+       var str=$(this).val();
        if((str.indexOf("14042")==0 && str.length==12)||(str.indexOf("15042")==0 && str.length==12)||(str.indexOf("16042")==0 && str.length==12)||(str.indexOf("17042")==0 && str.length==12))
         {
             if((str.substr(5,2)=="01" && str.length==12)||(str.substr(5,2)=="31" && str.length==12 && str.substr(0,5)!="14042")){
             if((str.substr(7,2)=="29" && str.length==12) || (str.substr(7,2)=="16" && str.length==12) || (str.substr(7,2)=="05" && str.length==12) || (str.substr(7,2)=="11" && str.length==12)  || (str.substr(7,2)=="17" && str.length==12)  ||  (str.substr(7,2)=="09" && str.length==12) || (str.substr(7,2)=="07" && str.length==12) || (str.substr(7,2)=="06" && str.length==12))
             {
-                 $("#helpp").html("Okay");
+                 $(this).next().html("Okay");
+                
         // var x=1;
           $("#submit").removeAttr("disabled");   
             }
@@ -860,7 +783,7 @@ $(function()
         }
         else if((str.indexOf("155310693")==0 && str.length==12)||(str.indexOf("165310693")==0 && str.length==12)||(str.indexOf("175310693")==0 && str.length==12))
             {
-                $("#helpp").html("Okay");
+                $(this).next().html("Okay");
         // var x=1;
           $("#submit").removeAttr("disabled");
             }
@@ -868,14 +791,15 @@ $(function()
         
         
        else {
-       	$("#helpp").html("Invalid Enrollment no.");
+       	//$("#helpp").html("Invalid Enrollment no.");
+           $(this).next().html("Invalid enrollment no.");
        	
        }
 
 
         if(str=='') 
         {     	
-        	$("#helpp").html("");
+        	$(this).next().html("");
         	$("#submit").prop("disabled", true);}
         e.preventDefault();
 
@@ -901,6 +825,9 @@ $(function()
     
     
         </script>        
+        
+
+
         
   </body>
 
