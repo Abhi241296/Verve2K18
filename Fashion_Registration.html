@@ -414,34 +414,22 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
 <!----------------------------------------------------------------->
 
 
-<input type="hidden" value="Dance" name="event" />
+<input type="hidden" value="Fashion" name="event" />
 
 <!--Choose the dance style-->
 <p>
-<label style="color: white; font-size: 1.2em;">Choose your Dance Style</label>
 
 <br>
-<span class="wpcf7-form-control-wrap radio-134" style="font-size: 1.2em;color: white;">
-<span class="wpcf7-form-control wpcf7-radio">
 
 
-<span class="wpcf7-list-item first">
-<label>
-<input name="radio-134" value="Theme" checked="checked" type="radio" />
-<span class="wpcf7-list-item-label">Theme</span>
+
+
+<span>
+<label><input name="radio-134" value="" type="hidden" />
 </label>
 </span>
 
 
-
-<span class="wpcf7-list-item">
-<label><input name="radio-134" value="Non Theme" type="radio" />
-<span class="wpcf7-list-item-label">Non Theme</span>
-</label>
-</span>
-
-
-</span></span>
 
 </p>
 
@@ -450,10 +438,8 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
 <label>Category<br />
 <select name="category" id="category">
 <!--<option value="" selected>select</option>-->
-<option value="Solo">Solo</option>
-<option value="Duet">Duet</option>
-<option value="Group">Group</option>
-    </select>
+<option value="Solo" fixed>Solo</option>
+ </select>
     </label>
     
     <!-- onchange="populate(this.options[this.selectedIndex].value)"-->
@@ -525,7 +511,7 @@ Name (Learder's name, if group)
         
             
         <div id="items">
-            
+				
         </div>                                            
             
         
@@ -696,68 +682,8 @@ $(function()
 
 
     
-<script>
-    $(function(){
-        
-        $("#category").change(function(){
-            var cat=$("#category option:selected").val();
-            
-            
-             if(cat=="Solo")
-            {
-                
-                $("#categ").empty();
-                $("#items").empty();
-                
-            }
-        else if(cat=="Duet")
-            {
-                
-                $("#categ").empty();
-                $("#items").empty();
-                $("#categ").append('<label id="partner_name_label">Partner\'s name <br><input id="partner_name" type="text" name="partner_name" required  /><br></label>');
-            }
-        else if(cat=="Group"){
-            $("#categ").empty();
-            $("#items").empty();
-            $("#categ").append('<label id="team_name_label">Team name <br><input id="team_name" type="text" name="team_name" required /><br></label><br><br><label id="team_size_label">No of members <br><input id="team_size" type="number" name="team_size" required  /><br></label></label>');
-        }
-        else{
-            $("#categ").empty();
-        }
-            
-            
-        })
-       
-    });
-</script>
-    
     
             
-        
-<script>
-            $(function() {
- //maximum input boxes allowed
-var wrapper = $("#items"); //Fields wrapper
-//var add_button = $(".add_field_button"); //Add button ID
-
- //initlal text box count
-$("#categ").on("keyup","#team_size",function(e){ //on add input button click
-var x = 2;
-wrapper.empty();
-var max_fields = parseInt(document.getElementById("team_size").value);
-e.preventDefault();
-    if(max_fields>1)
-$(wrapper).append('Enter names for rest '+(max_fields-1)+' members<br>');
-while(x <= max_fields){ //max input box allowed
- //text box increment
-$(wrapper).append('member '+x+'<br><label>Enrollment no <input type="text" class="enrolll" name="enrollment'+x+'"  required /><p class="helpp"></p>Name <input type="text" name="name'+x+'" required class="inputt" /></label><br><br><br><br>'); //add input box
-    x++;
-}
-});
- 
-})
-        </script>
         
         
         

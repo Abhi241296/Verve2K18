@@ -414,11 +414,11 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
 <!----------------------------------------------------------------->
 
 
-<input type="hidden" value="Dance" name="event" />
+<input type="hidden" value="Drama" name="event" />
 
 <!--Choose the dance style-->
 <p>
-<label style="color: white; font-size: 1.2em;">Choose your Dance Style</label>
+<label style="color: white; font-size: 1.2em;">Choose your Drama Style</label>
 
 <br>
 <span class="wpcf7-form-control-wrap radio-134" style="font-size: 1.2em;color: white;">
@@ -427,16 +427,29 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
 
 <span class="wpcf7-list-item first">
 <label>
-<input name="radio-134" value="Theme" checked="checked" type="radio" />
-<span class="wpcf7-list-item-label">Theme</span>
+<input name="radio-134" value="skit" checked="checked" type="radio" />
+<span class="wpcf7-list-item-label">Skit</span>
 </label>
 </span>
 
 
 
 <span class="wpcf7-list-item">
-<label><input name="radio-134" value="Non Theme" type="radio" />
-<span class="wpcf7-list-item-label">Non Theme</span>
+<label><input name="radio-134" value="mime" type="radio" />
+<span class="wpcf7-list-item-label">Mime</span>
+</label>
+</span>
+
+
+<span class="wpcf7-list-item">
+<label><input name="radio-134" value="mimicry" type="radio" />
+<span class="wpcf7-list-item-label">Mimicry</span>
+</label>
+</span>
+
+<span class="wpcf7-list-item">
+<label><input name="radio-134" value="mono acting" type="radio" />
+<span class="wpcf7-list-item-label">Mono Acting</span>
 </label>
 </span>
 
@@ -462,7 +475,7 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
 <br>
 
 <label>
-Name (Learder's name, if group) 
+Name (Leader's name, if group) 
 <input type="text" name="name" required class="inputt" />
 </label><br><br>
        
@@ -627,8 +640,8 @@ var tg_global_var = {"url":"http:\/\/139.59.69.58\/wp-admin\/admin-ajax.php","no
 <script type='text/javascript' src='javascript/wp-embed.min.js'></script>
 <script type='text/javascript' src='javascript/js_composer_front.min.js'></script>
 <script type="text/javascript">var to_like_post = {"url":"http://139.59.69.58/wp-admin/admin-ajax.php","nonce":"0b0eb21c10"};jQuery.noConflict(),function(a){"use strict";a(document).ready(function(){a(document).on("click",".to-post-like:not('.to-post-like-unactive')",function(b){b.preventDefault();var c=a(this),d=c.data("post-id"),e=parseInt(c.find(".to-like-count").text());return c.addClass("heart-pulse"),a.ajax({type:"post",url:to_like_post.url,data:{nonce:to_like_post.nonce,action:"to_like_post",post_id:d,like_nb:e},context:c,success:function(b){b&&(c=a(this),c.attr("title",b.title),c.find(".to-like-count").text(b.count),c.removeClass(b.remove_class+" heart-pulse").addClass(b.add_class))}}),!1})})}(jQuery);</script>  
- 
- 
+
+
  
 <script>
     
