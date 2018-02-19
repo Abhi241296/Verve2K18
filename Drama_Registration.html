@@ -427,7 +427,7 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
 
 <span class="wpcf7-list-item first">
 <label>
-<input name="radio-134" value="skit" checked="checked" type="radio" />
+<input name="radio-134" value="skit" type="radio" />
 <span class="wpcf7-list-item-label">Skit</span>
 </label>
 </span>
@@ -463,9 +463,10 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
 <label>Category<br />
 <select name="category" id="category">
 <!--<option value="" selected>select</option>-->
-<option value="Solo">Solo</option>
-<option value="Duet">Duet</option>
-<option value="Group">Group</option>
+<option disabled selected style="display: none;">select</option>
+<option value="Solo" id="solo">Solo</option>
+<option value="Duet" id="duet">Duet</option>
+<option value="Group" id="group">Group</option>
     </select>
     </label>
     
@@ -875,8 +876,35 @@ $(function()
         });
     })
 </script>
+<script type="text/javascript">
+ $(document).ready(function(){
+        $("input[type='radio']").click(function(){
+            var radioValue = $("input[name='radio-134']:checked").val();
+             if(radioValue=="mono acting"){
+                $("#group").hide();
+                $("#duet").hide();
+                $("#solo").show();
+            }
+            if(radioValue=="skit"){
+                $("#group").show();
+                $("#duet").hide();
+                $("#solo").hide();
+            }
+            if(radioValue=="mime"){
+                $("#group").show();
+                $("#duet").show();
+                $("#solo").show();
+            }
+            if(radioValue=="mimicry"){
+                $("#group").hide();
+                $("#duet").hide();
+                $("#solo").show();
+            }
+        });
         
-        
+    }); 
+ </script>
+     
         
 
 

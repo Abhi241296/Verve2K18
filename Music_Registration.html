@@ -451,7 +451,7 @@ try {}catch(err) {  alert("CUSTOM JS: " + err.message); }
 <select name="category" id="category">
 <!--<option value="" selected>select</option>-->
 <option value="Solo">Solo</option>
-<option value="Duet">Duet</option>
+<option value="Duet" id="duet">Duet</option>
 <option value="Group">Group</option>
     </select>
     </label>
@@ -864,7 +864,20 @@ $(function()
 </script>
         
         
+   <script type="text/javascript">
+ $(document).ready(function(){
+        $("input[type='radio']").click(function(){
+            var radioValue = $("input[name='radio-134']:checked").val();
+             if(radioValue=="Vocal"){
+                $("#duet").show();
+            }
+            if(radioValue=="Instrumental"){
+                $("#duet").hide();
+            }
+        });
         
+    }); 
+ </script>     
 
 
         
